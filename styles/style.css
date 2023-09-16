@@ -1,0 +1,225 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+  border: 1px solid transparent;
+}
+
+body {
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 8em;
+}
+.body .second, .body .third {
+  margin: 0 0.5em;
+}
+.body .logo {
+  padding: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  z-index: 1;
+  background-image: url("../images/bg-header-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.body .logo .icon {
+  max-width: 100px;
+  margin: 0 auto;
+}
+.body .logo .background {
+  background-image: linear-gradient(to top, white 1%, transparent);
+  margin: 0;
+  margin-bottom: -2px;
+  padding: 3.5rem;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.body .first-head {
+  margin-top: 1%;
+}
+.body .head {
+  font-weight: 600;
+  color: hsl(210, 10%, 33%);
+  text-align: center;
+  font-size: 1.7em;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 500px;
+}
+.body .image {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.body .button {
+  display: flex;
+  gap: 15px;
+  width: clamp(150px, 40%, 400px);
+  margin: 0 auto;
+  flex-direction: column;
+  padding: 0;
+}
+.body .ios, .body .mac {
+  margin: 0 auto;
+  padding: 0;
+  border-radius: 25px;
+}
+.body .ios a, .body .mac a {
+  display: block;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  color: white;
+  border-radius: 25px;
+}
+.body .ios a:link, .body .mac a:link {
+  padding: 0.5em;
+  display: block;
+  text-decoration: none;
+}
+.body .ios {
+  background-color: hsl(171, 66%, 44%);
+  -webkit-box-shadow: 0 4.5px 9px -2.5px hsl(171, 66%, 44%);
+  -moz-box-shadow: 0 4.5px 9px -2.5px hsl(171, 66%, 44%);
+  box-shadow: 0 4.5px 9px -2.5px hsl(171, 66%, 44%);
+}
+.body .ios:hover {
+  background-color: #3cd7c0;
+}
+.body .mac {
+  background-color: hsl(233, 100%, 69%);
+  -webkit-box-shadow: 0 4.5px 9px -2.5px grey;
+  -moz-box-shadow: 0 4.5px 9px -2.5px grey;
+  box-shadow: 0 4.5px 9px -2.5px grey;
+}
+.body .mac:hover {
+  background-color: #94a0ff;
+}
+.body .body-text {
+  margin: -15px auto 3em auto;
+  color: hsl(201, 11%, 66%);
+  text-align: center;
+  width: 90%;
+  max-width: 600px;
+}
+.body .svg {
+  width: 70px;
+  margin: 0 auto;
+}
+.body .companies {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.body .companies .companies--child {
+  width: 30%;
+  max-width: 500px;
+  margin: 0.8em 0;
+}
+.body .more-info {
+  background-color: #d7dcdf;
+  padding: 1em 0 0.5em 0;
+}
+.body .more-info .footer-logo {
+  width: 40px;
+  margin: 0 auto 0 auto;
+}
+.body .more-info .list {
+  list-style-type: none;
+  width: 100%;
+}
+.body .more-info .list .list--child {
+  color: hsl(210, 10%, 33%);
+  padding: 0.5em;
+  text-align: center;
+}
+.body .more-info .socials {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.body .more-info .socials .socials--child {
+  width: 20px;
+}
+
+.exit {
+  font-size: 0.7em;
+}
+.exit a {
+  color: black;
+  text-decoration: none;
+}
+.exit a:hover {
+  opacity: 0.5;
+}
+
+@media screen and (min-width: 700px) {
+  .body .button {
+    flex-direction: row;
+  }
+  .body .logo {
+    z-index: 1;
+    background-image: url("../images/bg-header-desktop.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .body .logo .background {
+    background-image: linear-gradient(to top, white 1%, transparent);
+  }
+}
+@media screen and (min-width: 950px) {
+  .body .second .flex-items {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .body .second .flex-items .image {
+    margin: 0;
+    transform: translateX(-35px);
+  }
+  .body .second .flex-items .writing .head {
+    text-align: left;
+    margin: 0.5em 0 1em 0;
+  }
+  .body .second .flex-items .writing .body-text {
+    text-align: left;
+    margin: -15px 0 5%;
+  }
+  .body .second .second-flex-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .body .companies {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .body .companies .companies--child {
+    width: 150px;
+  }
+  .more-info {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .more-info .list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .more-info .list .list--child {
+    width: 200px;
+  }
+}/*# sourceMappingURL=style.css.map */

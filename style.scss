@@ -1,0 +1,287 @@
+
+
+$highlight: 1px solid transparent;
+$strongCyan: hsl(171, 66%, 44%);
+$lightBlue: hsl(233, 100%, 69%);
+$darkGreyishBlue:hsl(210, 10%, 33%);
+$greyishBlue:hsl(201, 11%, 66%);
+
+@mixin flex($gap, $alignedVertical, $alignedHorizontal){
+  display: flex;
+  align-items: $alignedHorizontal;
+  justify-content: $alignedVertical;
+  gap: $gap;
+}
+
+
+
+*,*::after,*::before{box-sizing: border-box; border: $highlight;}
+
+body{
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+img{
+  width: 100%;
+}
+
+.body{
+  display: flex;
+  flex-direction: column;
+  gap: 8em;
+
+  .second, .third{
+    margin: 0 .5em;
+  }
+
+
+
+  .logo{
+    padding: 0;
+    width: 100%;
+    @include flex(0,center ,center );
+    z-index: 1;
+    background-image: url("../images/bg-header-mobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    .icon{
+      max-width: 100px;
+      margin: 0 auto;
+    }
+    
+    .background{
+      background-image: linear-gradient(to top, white 1% , transparent);
+      margin: 0;
+      margin-bottom: -2px;
+      padding: 3.5rem;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  .first-head{
+    margin-top: 1%;
+  }
+  
+  .head{
+    font-weight: 600;
+    color: $darkGreyishBlue;
+    text-align: center;
+    font-size: 1.7em;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 500px
+  }
+
+  .image{
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .button{
+    display: flex;
+    gap: 15px;
+    width: clamp(150px, 40%, 400px);
+    margin: 0 auto;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .ios, .mac{
+    margin: 0 auto;
+    padding: 0;
+    border-radius:25px ;
+
+    a{
+      display: block;
+      padding: 0;
+      margin: 0;
+      font-size: 1rem;
+      color: white;
+      border-radius: 25px;
+
+      &:link{
+        padding: .5em;
+        display: block;
+        text-decoration: none;
+      }
+    }
+  }
+  
+  .ios{
+    background-color: $strongCyan;
+    -webkit-box-shadow: 0 4.5px 9px -2.5px $strongCyan;
+    -moz-box-shadow: 0 4.5px 9px -2.5px $strongCyan;
+    box-shadow: 0 4.5px 9px -2.5px $strongCyan;
+
+    &:hover{
+      background-color: lighten($color: $strongCyan, $amount: 10%);
+    }
+  }
+
+  .mac{
+    background-color: $lightBlue;
+    -webkit-box-shadow: 0 4.5px 9px -2.5px grey;
+    -moz-box-shadow: 0 4.5px 9px -2.5px grey;
+    box-shadow: 0 4.5px 9px -2.5px grey;
+
+    &:hover{
+      background-color: lighten($color: $lightBlue, $amount: 10%);
+    }
+  }
+  
+  .body-text{
+    margin: -15px auto 3em auto;
+    color: $greyishBlue;
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+  }
+  
+  .svg{
+    width: 70px;
+    margin: 0 auto;
+  }
+
+  .companies{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    .companies--child{
+      width: 30%;
+      max-width: 500px;
+      margin: .8em 0;
+    }
+  }
+
+  .more-info{
+    background-color: lighten($color: $greyishBlue, $amount: 20%);
+    padding: 1em 0 .5em 0;
+
+    .footer-logo{
+      width: 40px;
+      margin: 0 auto 0 auto;
+    }
+
+    .list{
+      list-style-type: none;
+      width: 100%;
+
+      .list--child{
+        color: $darkGreyishBlue;
+        padding: .5em;
+        text-align: center;
+      }
+    }
+
+  .socials{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    .socials--child{
+      width: 20px;
+    }
+  }
+
+  }
+}
+// TODO styling of the attribution
+.exit{
+  font-size: .7em;
+
+  a{
+    color: black;
+    text-decoration: none;
+
+    &:hover{
+      opacity: 0.5;
+    }
+  }
+}
+
+@media screen and (min-width: 700px){
+  .body{
+    .button{
+      flex-direction: row;
+    }
+    .logo{
+    z-index: 1;
+    background-image: url("../images/bg-header-desktop.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+      .background{
+        background-image: linear-gradient(to top, white 1%, transparent);
+      }
+    }
+
+  }
+}
+
+@media screen and (min-width: 950px){
+  .body{
+    .second{
+      .flex-items{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 10px;
+    
+        .image{
+          margin: 0;
+          transform: translateX(-35px);
+        }
+        .writing{
+          .head{
+            text-align: left;
+            margin: .5em 0 1em 0;
+          }
+          .body-text{
+            text-align: left;
+            margin: -15px 0 5%;
+            
+          }
+        }
+      }
+  
+      .second-flex-items{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    
+    .companies{
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      .companies--child{
+        width: 150px;
+      }
+
+    }
+  }
+
+  .more-info{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    .list{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+
+      .list--child{
+        width: 200px;
+      }
+    }
+  }
+
+
+}
