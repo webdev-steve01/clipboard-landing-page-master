@@ -14,9 +14,7 @@ This is a solution to the [Clipboard landing page challenge on Frontend Mentor](
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -28,14 +26,9 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 
 ### Screenshot
+view screenshots in the screenshots folder
 
-![](./screenshot.jpg)
 
-
-### Links
-
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
 
@@ -44,10 +37,10 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - SCSS 
-- Flexbox
+- FlexBox
 - CSS Grid
 - Mobile-first workflow
-- [Styled Components](https://100l5.io/) - For box-shadow
+- [box shadow](https://100l5.io/) - For box-shadow
 
 
 
@@ -64,7 +57,7 @@ I'm actually learning JavaScript right now using the book: eloquent javascript, 
 
 ### Useful resources
 
-- [Example resource 1](https://100l5.io/) - This helped me with box-shadows. I really like how easy it was to use the site and i had time to worry about other things.
+- [site for my box shadows](https://100l5.io/) - This helped me with box-shadows. I really like how easy it was to use the site and i had time to worry about other things.
 
 ## Author
 
